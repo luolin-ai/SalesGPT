@@ -1,40 +1,25 @@
-# :robot: SalesGPT - Your Context-Aware AI Sales Assistant
+🤖 SalesGPT - 您的情境感知 AI 销售助理
+此存储库演示了使用 LLM 实现上下文感知 AI 销售助手。
 
-This repo demonstrates an implementation of a **context-aware** AI Sales Assistant using LLMs.
+SalesGPT 是上下文感知的，这意味着它可以了解它处于销售对话的哪个部分并采取相应的行动。 此外，SalesGPT 可以访问工具，例如您自己的预定义产品知识库，从而大大减少幻觉！
 
-SalesGPT is context-aware, which means it can understand what section of a sales conversation it is in and act accordingly.
-Morever, SalesGPT has access to tools, such as your own pre-defined product knowledge base, significantly reducing hallucinations!
+我们在此实现中利用了langchain库，特别是自定义代理配置，并受到BabyAGI架构的启发。
 
-We leverage the [`langchain`](https://github.com/hwchase17/langchain) library in this implementation, specifically [Custom Agent Configuration](https://langchain-langchain.vercel.app/docs/modules/agents/how_to/custom_agent_with_tool_retrieval) and are inspired by [BabyAGI](https://github.com/yoheinakajima/babyagi) architecture.
+我们的愿景：打造最好的开源自主销售代理
+我们正在构建 SalesGPT，为您最好的自主销售代理提供支持。因此，我们很想了解更多关于您正在构建的用例，这些用例将推动 SalesGPT 开发路线图。
 
-## Our Vision: Build the Best Open-Source Autonomous Sales Agent
+如果您希望我们更好地满足您的需求，请填写我们的 45 秒 SalesGPT 用例调查
 
-We are building SalesGPT to power your best Autonomous Sales Agents. Hence, we would love to learn more about use cases you are building towards which will fuel SalesGPT development roadmap.
+如果您寻求帮助建立您的自主销售代理
+请发送电子邮件给存储库作者。
 
-**If you want us to build better towards your needs, please fill out our 45 seconds [SalesGPT Use Case Survey](https://5b7mfhwiany.typeform.com/to/xmJbWIjG)**
-
-### If you looking for help building your Autonomous Sales Agents
-
-Please send an email to [the repo author](mailto:filipmichalsky@gmail.com).
-
-## :red_circle: Latest News
-
-- Sales Agent can now take advantage of **tools**, such as look up products in a product catalog!
-
-### Demo: Outbound Prospecting from Crusty AI: A New Way to Sell? 🤔
-
-<i>Crusty AI Sales Agent Phone Call Demo - Powered by SalesGPT</i>
-
-<div>
-    <a href="https://www.loom.com/share/f0fac42954904471b266980e4948b07d">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f0fac42954904471b266980e4948b07d-with-play.gif">
-    </a>
-  </div>
+🔴 最新消息
+销售代理现在可以利用工具，例如在产品目录中查找产品！
+演示：来自Crusty AI的出站勘探：一种新的销售方式？🤔
+Crusty AI 销售代理电话演示 - 由 SalesGPT 提供支持
 
 
-## Quickstart
-
-```python
+快速入门
 import os
 from salesgpt.agents import SalesGPT
 from langchain.chat_models import ChatOpenAI
@@ -78,106 +63,83 @@ sales_agent.human_step(user_input)
 # agent
 sales_agent.determine_conversation_stage() # optional for demonstration, built into the prompt
 sales_agent.step()
-```
-> Conversation Stage: 
-> Introduction: Start the conversation by introducing yourself and your company. 
+对话阶段： 简介：通过介绍自己和您的公司来开始对话。
 
-> Thought: Do I need to use a tool? No <br>
-> Ted Lasso: Hello, my name is Ted Lasso and I'm calling on behalf of Sleep Haven. We are a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. I was wondering if you would be interested in learning more about our products and how they can improve your sleep?
+想：我需要使用工具吗？No
+Ted Lasso：你好，我叫Ted Lasso，我代表Sleep Haven打电话。我们是一家优质的床垫公司，为客户提供最舒适和支持性的睡眠体验。我想知道您是否有兴趣了解更多关于我们的产品以及它们如何改善您的睡眠？
 
-> User: Yea, sure
+用户：是的，当然
 
-> Conversation Stage: 
-> Value proposition: Briefly explain how your product/service can benefit the prospect. 
+对话阶段： 价值主张：简要说明您的产品/服务如何使潜在客户受益。
 
-> Thought: Do I need to use a tool? No <br>
-> Ted Lasso: Great to hear that! Our mattresses are specially designed to contour to your body shape, providing the perfect level of support and comfort for a better night's sleep. Plus, they're made with high-quality materials that are built to last. Would you like to hear more about our different mattress options?
+想：我需要使用工具吗？没有
+泰德·拉索：很高兴听到这个消息！我们的床垫经过专门设计，可根据您的体型进行轮廓塑造，提供完美的支撑和舒适度，让您睡个好觉。此外，它们采用经久耐用的优质材料制成。您想了解更多关于我们不同的床垫选择吗？
 
-> User:  What pricing do you have for your mattresses?
+用户：你们的床垫定价是多少？
 
-> Thought: Do I need to use a tool? Yes --> AI Agent uses tools here.<br>
-> Action: ProductSearch<br>
-> ActionInput pricing for mattresses<br>
-> Observation: Sleep Haven offers three mattresses: the Classic Harmony Spring Mattress for $1,299, the Plush Serenity Bamboo Mattress for $2,599, and the Luxury Cloud-Comfort Memory Foam Mattress for $999. The sizes available vary by mattress.<br>
-> Ted Lasso: Sleep Haven offers three mattresses at different price points. The Classic Harmony Spring Mattress is priced at $1,299, the Plush Serenity Bamboo Mattress is priced at $2,599, and the Luxury Cloud-Comfort Memory Foam Mattress is priced at $999. The prices may vary depending on the size you choose. Would you like more information about the specific sizes and features of each mattress? 
+想：我需要使用工具吗？是的 - > AI 代理在此处使用工具。
+操作：产品搜索
+操作床垫的
+输入定价 观察：Sleep Haven 提供三种床垫：经典和谐弹簧床垫 1，299 美元，毛绒宁静竹床垫 2，599 美元，豪华云舒适记忆泡沫床垫 999 美元。可用的尺寸因床垫而异。
+Ted Lasso：Sleep Haven提供三种不同价位的床垫。经典和谐弹簧床垫售价1，299美元，豪华宁静竹床垫售价2，599美元，豪华云舒适记忆泡沫床垫售价999美元。价格可能会因您选择的尺寸而异。您想了解更多关于每张床垫的具体尺寸和功能的信息吗？
 
-## Product Knowledge Base
+产品知识库
+AI 销售代理可以访问工具，例如您的内部产品知识库。 这允许代理商只谈论您自己的产品，并显着减少幻觉。
 
-The AI Sales Agent has access to tools, such as your internal Product Knowledge base.
-This allows the agent to only talk about your own products and significantly reduces hallucinations.
+了解上下文
+AI 销售代理了解对话阶段（您可以根据需要定义自己的阶段）：
 
-## Understanding Context
+简介：通过介绍自己和您的公司来开始对话。
+资格： 通过确认潜在客户是否是与您的产品/服务交谈的合适人选来限定他们。
+价值主张：简要说明您的产品/服务如何使潜在客户受益。
+需求分析：提出开放式问题，以发现潜在客户的需求和痛点。
+解决方案演示：根据潜在客户的需求，将您的产品/服务展示为可以解决其痛点的解决方案。
+异议处理：解决潜在客户可能对您的产品/服务提出的任何异议。
+关闭：通过提出下一步来要求出售。
+结束对话：用户不想继续对话，因此请结束通话。
+因此，该代理可以与潜在客户进行自然的销售对话，并根据对话阶段行事。因此，此笔记本演示了如何使用 AI 来自动化销售开发代表活动，例如出站销售电话。
 
-The AI Sales Agent understands the conversation stage (you can define your own stages fitting your needs):
-
-- Introduction: Start the conversation by introducing yourself and your company. 
-- Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service.
-- Value proposition: Briefly explain how your product/service can benefit the prospect. 
-- Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. 
-- Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.
-- Objection handling: Address any objections that the prospect may have regarding your product/service. 
-- Close: Ask for the sale by proposing a next step. 
-- End Conversation: The user does not want to continue the conversation, so end the call.
- 
-As such, this agent can have a natural sales conversation with a prospect and behaves based on the conversation stage. Hence, this notebook demonstrates how we can use AI to automate sales development representatives activites, such as outbound sales calls. 
+建筑
 
 
-## Architecture
+安装
+确保你有python 3.10+并运行：
 
-<img src="https://singularity-assets-public.s3.amazonaws.com/new_flow.png"  width="800" height="440">
+pip install -r requirements.txt
 
-## Installation
+创建文件并通过指定一行将 Open AI 密钥放在那里：.env
 
-Make sure your have a python 3.10+ and run:
+OPENAI_API_KEY=sk-xxx
 
-`pip install -r requirements.txt`
+用点子安装
 
-Create `.env` file and put your Open AI Key there by specifying a line: 
+pip install salesgpt
 
-`OPENAI_API_KEY=sk-xxx`
+试试看
+要了解与 AI 销售代理的对话，您可以运行：
 
-Install with pip
+python run.py --verbose True --config examples/example_agent_setup.json
 
-`pip install salesgpt`
+从您的终端。
 
-## Try it out 
+联系我们
+如有疑问，可以联系存储库作者。
 
-To get a feel for a conversation with the AI Sales agent, you can run:
+关注我@FilipMichalsky
 
-`python run.py --verbose True --config examples/example_agent_setup.json`
+销售GPT路线图
+[高优先级]提高解析器问题的可靠性 这里 和 这里
+在此处添加 OpenAI 函数代理问题的示例实现
+在此处添加对多个工具问题的支持
+为需要线性遍历的阶段添加代理控制器，而不会在此处跳过问题
+添加以根据矢量距离选择工具，以完成所需的takstoo_getter
+代理应该拥有哪些工具？（例如，搜索互联网的能力）
+添加销售代理与您网站上的 AI 插件交互的功能 （.well-known/ai-plugin.json） - 添加在用户中断代理时停止生成的功能
+- 添加一个矢量存储以合并真实的产品知识库，而不是组成它的LLM。
 
-from your terminal.
+- 销售代理可以提供的产品/服务的知识库（因此LLM不会弥补）
 
-## Contact Us
+- 将LLM链（线性工作流程）转换为代理（根据用户的输入决定做什么）
 
-For questions, you can [contact the repo author](mailto:filipmichalsky@gmail.com).
-
-Follow me at [@FilipMichalsky](https://twitter.com/FilipMichalsky)
-
-
-## SalesGPT Roadmap
-
-
-
-
-- [high priority] Improve reliability of the parser [issue here](https://github.com/filip-michalsky/SalesGPT/issues/26) and [here](https://github.com/filip-michalsky/SalesGPT/issues/25)
-- Add example implementation of OpenAI functions agent[issue here](https://github.com/filip-michalsky/SalesGPT/issues/17)
-- Add support for multiple tools [issue here](https://github.com/filip-michalsky/SalesGPT/issues/10)
-- Add an agent controller for whne stages need to be traversed linearly without skips [issue here](https://github.com/filip-michalsky/SalesGPT/issues/19)
-- Add `too_getter` to choose a tool based on vector distance to the taks needed to be done
-- What tools should the agent have? (e.g., the ability to search the internet)
-- Add the ability of Sales Agent to interact with AI plugins on your website (.well-known/ai-plugin.json)
-~~-
- Add the ability to stop generation when user interupts the agent~~
-
-~~- Add a vectorstore to incorporate a real product knowledge base vs. the LLM making it up.~~
-
-~~- Knowledge base for products/services a Sales Agent can offer (so that LLM does not make it up)~~
-
-~~- Convert LLM Chains (linear workflow) to an Agent (decides what to do based on user's input)~~
-
-
-
-## Contributing
-
-Contributions are highly encouraged! Please fork and submit a PR.
+贡献
+强烈鼓励贡献！请分叉并提交 PR。
