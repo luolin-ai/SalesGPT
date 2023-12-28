@@ -1,183 +1,67 @@
-# :robot: SalesGPT - Your Context-Aware AI Sales Assistant
+是的，让我们开始吧。 我将按照您的要求对您的SCI论文进行润色，以提高其学术严谨性。我将对每个段落进行修改，以纠正任何语法错误，改进句子结构，并使文本更正式。对于每个需要改进的段落，我会在Markdown表中展示所有修改过的句子。每个表格将包含三列：原始句子、修改后的句子的突出部分，以及为什么要进行这些改变的解释。最后，我将重写完整的、正确的段落。我会从文件的开始部分逐段进行，首先处理摘要部分。
 
-This repo demonstrates an implementation of a **context-aware** AI Sales Assistant using LLMs.
+请稍等，我将开始处理并展示修改后的内容。
 
-SalesGPT is context-aware, which means it can understand what section of a sales conversation it is in and act accordingly.
-Morever, SalesGPT has access to tools, such as your own pre-defined product knowledge base, significantly reducing hallucinations!
+### 段落润色
 
-We leverage the [`langchain`](https://github.com/hwchase17/langchain) library in this implementation, specifically [Custom Agent Configuration](https://langchain-langchain.vercel.app/docs/modules/agents/how_to/custom_agent_with_tool_retrieval) and are inspired by [BabyAGI](https://github.com/yoheinakajima/babyagi) architecture.
+#### 段落原文
+"Background: In observational studies a significant correlation exists between cathepsins and most neurodegenerative diseases. However the potential causal relationship remains uncertain."
 
-## Our Vision: Build the Best Open-Source Autonomous Sales Agent
+#### 修改表
 
-We are building SalesGPT to power your best Autonomous Sales Agents. Hence, we would love to learn more about use cases you are building towards which will fuel SalesGPT development roadmap.
+| 原句 | 修改后的句子部分 | 解释 |
+| ---- | ---------------- | ---- |
+| Background: In observational studies a significant correlation exists between cathepsins and most neurodegenerative diseases. | Background: Observational studies have identified a significant correlation between cathepsins and a majority of neurodegenerative diseases. | 改进了句子的流畅度，并使其更正式。 |
+| However the potential causal relationship remains uncertain. | However, the nature of this potential causal relationship remains to be elucidated. | 增加了逗号以改善语法，并使语句更加学术化。 |
 
-**If you want us to build better towards your needs, please fill out our 45 seconds [SalesGPT Use Case Survey](https://5b7mfhwiany.typeform.com/to/xmJbWIjG)**
+#### 重写的段落
+"Background: Observational studies have identified a significant correlation between cathepsins and a majority of neurodegenerative diseases. However, the nature of this potential causal relationship remains to be elucidated."
 
-### If you looking for help building your Autonomous Sales Agents
+---
 
-Please send an email to [the repo author](mailto:filipmichalsky@gmail.com).
+接下来，我将继续润色文档中的下一段。请稍候。
 
-## :red_circle: Latest News
+### 段落润色
 
-- Sales Agent can now take advantage of **tools**, such as look up products in a product catalog!
+#### 段落原文
+"Methods: In this study we used Mendelian Randomization (MR) with genetic variants linked to cathepsins as instrumental variables. Summary data from European ancestry genome-wide association studies (GWASs) on Alzheimer's disease (AD) Parkinson's disease (PD) Dementia with Lewy bodies (DLB) multiple sclerosis (MS) and Amyotrophic lateral sclerosis (ALS) as outcomes. We employed inverse variance-weighted (IVW) MR to assess the causal impact of cathepsins on neurodegenerative diseases (NDs). Various sensitivity analyses were employed to evaluate the effectiveness of the results followed by heterogeneity test. Multivariable MR (MVMR) analysis was utilized to adjust for potential confounding factors. Additionally reverse MR analysis reinforced the findings of the forward MR analysis."
 
-### Demo: Outbound Prospecting from Crusty AI: A New Way to Sell? 🤔
+#### 修改表
 
-<i>Crusty AI Sales Agent Phone Call Demo - Powered by SalesGPT</i>
+| 原句 | 修改后的句子部分 | 解释 |
+| ---- | ---------------- | ---- |
+| In this study we used Mendelian Randomization (MR) with genetic variants linked to cathepsins as instrumental variables. | In this study, we utilized Mendelian Randomization (MR) employing genetic variants associated with cathepsins as instrumental variables. | 加入逗号以增强可读性，使用“utilized”和“employing”增加了学术语气。 |
+| Summary data from European ancestry genome-wide association studies (GWASs) on Alzheimer's disease (AD) Parkinson's disease (PD) Dementia with Lewy bodies (DLB) multiple sclerosis (MS) and Amyotrophic lateral sclerosis (ALS) as outcomes. | Summary data were sourced from European ancestry genome-wide association studies (GWASs) focusing on Alzheimer's disease (AD), Parkinson's disease (PD), Dementia with Lewy bodies (DLB), multiple sclerosis (MS), and Amyotrophic lateral sclerosis (ALS) as outcomes. | 改进了句子结构，使其更清晰。 |
+| Various sensitivity analyses were employed to evaluate the effectiveness of the results followed by heterogeneity test. | Various sensitivity analyses were conducted to assess the robustness of the results, followed by a heterogeneity test. | 改用“conducted”和“assess”以增加正式性，清楚地表达了研究方法。 |
+| Multivariable MR (MVMR) analysis was utilized to adjust for potential confounding factors. | Additionally, multivariable MR (MVMR) analysis was implemented to adjust for potential confounding factors. | 在句首添加了“Additionally”以改善流畅度，并使用“implemented”来替换“utilized”以提供变化。 |
+| Additionally reverse MR analysis reinforced the findings of the forward MR analysis. | Furthermore, reverse MR analysis was employed to reinforce the findings of the forward MR analysis. | 使用“Furthermore”代替“Additionally”以避免重复，并改进了句子的结构。 |
 
-<div>
-    <a href="https://www.loom.com/share/f0fac42954904471b266980e4948b07d">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f0fac42954904471b266980e4948b07d-with-play.gif">
-    </a>
-  </div>
+#### 重写的段落
+"In this study, we utilized Mendelian Randomization (MR) employing genetic variants associated with cathepsins as instrumental variables. Summary data were sourced from European ancestry genome-wide association studies (GWASs) focusing on Alzheimer's disease (AD), Parkinson's disease (PD), Dementia with Lewy bodies (DLB), multiple sclerosis (MS), and Amyotrophic lateral sclerosis (ALS) as outcomes. Various sensitivity analyses were conducted to assess the robustness of the results, followed by a heterogeneity test. Additionally, multivariable MR (MVMR) analysis was implemented to adjust for potential confounding factors. Furthermore, reverse MR analysis was employed to reinforce the findings of the forward MR analysis."
 
+---
 
-## Quickstart
+现在我将继续处理下一段。请稍等。
 
-```python
-import os
-from salesgpt.agents import SalesGPT
-from langchain.chat_models import ChatOpenAI
+### 段落润色
 
-os.environ['OPENAI_API_KEY'] = 'sk-xxx' # fill me in
+#### 段落原文
+"Results: The MR analysis indicates that elevated cathepsin H levels associate with increased AD and DLB risk. Conversely cathepsin B levels show a negative correlation with PD risk. In a MVMR analysis with nine cathepsins as covariates effect estimates remain unchanged. Only the positive MR result suggests a weaker causal relationship between cathepsin H and ALS risk. Additionally no causal relationship is found between cathepsins and MS. Reverse MR analysis suggests PD and ALS may reduce cathepsin B levels. MS elevates cathepsin E levels DLB negatively correlates with cathepsin Z levels and there's no reverse causal link between AD and cathepsins."
 
-llm = ChatOpenAI(temperature=0.4)
-                            
-sales_agent = SalesGPT.from_llm(llm, use_tools=True, verbose=False,
-                            product_catalog = "examples/sample_product_catalog.txt",
-                            salesperson_name="Ted Lasso",
-                            salesperson_role="Sales Representative",
-                            company_name="Sleep Haven",
-                            company_business='''Sleep Haven 
-                            is a premium mattress company that provides
-                            customers with the most comfortable and
-                            supportive sleeping experience possible. 
-                            We offer a range of high-quality mattresses,
-                            pillows, and bedding accessories 
-                            that are designed to meet the unique 
-                            needs of our customers.'''
-                            )
-sales_agent.seed_agent()
-sales_agent.determine_conversation_stage() # optional for demonstration, built into the prompt
+#### 修改表
 
-# agent 
-sales_agent.step()
+| 原句 | 修改后的句子部分 | 解释 |
+| ---- | ---------------- | ---- |
+| The MR analysis indicates that elevated cathepsin H levels associate with increased AD and DLB risk. | The MR analysis revealed that elevated levels of cathepsin H are associated with an increased risk of AD and DLB. | 使用“revealed”和“are associated with”增加正式性，并改进了句子结构。 |
+| Conversely cathepsin B levels show a negative correlation with PD risk. | Conversely, cathepsin B levels exhibit a negative correlation with the risk of PD. | 加入逗号以改善语法，并使用“exhibit”来替换“show”以增加学术语气。 |
+| In a MVMR analysis with nine cathepsins as covariates effect estimates remain unchanged. | In a MVMR analysis incorporating nine cathepsins as covariates, effect estimates remained consistent. | 改善句子结构，并使用“incorporating”和“remained consistent”以增强学术表达。 |
+| Only the positive MR result suggests a weaker causal relationship between cathepsin H and ALS risk. | Notably, only the positive MR results suggest a weaker causal relationship between cathepsin H and ALS risk. | 添加“Notably”以增强语句的强调。 |
+| Additionally no causal relationship is found between cathepsins and MS. | Furthermore, no causal relationship was identified between cathepsins and MS. | 使用“Furthermore”代替“Additionally”避免重复，并改用过去时态来保持一致性。 |
+| Reverse MR analysis suggests PD and ALS may reduce cathepsin B levels. MS elevates cathepsin E levels DLB negatively correlates with cathepsin Z levels and there's no reverse causal link between AD and cathepsins. | Reverse MR analysis suggests that PD and ALS may lead to reduced cathepsin B levels, while MS is associated with elevated cathepsin E levels. DLB shows a negative correlation with cathepsin Z levels, and no reverse causal link was found between AD and cathepsins. | 改善了句子结构，使其更清晰，并使用“shows”和“was found”以增加学术性。 |
 
-# user
-user_input = input('Your response: ') # Yea, sure
-sales_agent.human_step(user_input)
+#### 重写的段落
+"The MR analysis revealed that elevated levels of cathepsin H are associated with an increased risk of AD and DLB. Conversely, cathepsin B levels exhibit a negative correlation with the risk of PD. In a MVMR analysis incorporating nine cathepsins as covariates, effect estimates remained consistent. Notably, only the positive MR results suggest a weaker causal relationship between cathepsin H and ALS risk. Furthermore, no causal relationship was identified between cathepsins and MS. Reverse MR analysis suggests that PD and ALS may lead to reduced cathepsin B levels, while MS is associated with elevated cathepsin E levels. DLB shows a negative correlation with cathepsin Z levels, and no reverse causal link was found between AD and cathepsins."
 
-# agent
-sales_agent.determine_conversation_stage() # optional for demonstration, built into the prompt
-sales_agent.step()
+---
 
-# user
-user_input = input('Your response: ') # What pricing do you have for your mattresses?
-sales_agent.human_step(user_input)
-
-# agent
-sales_agent.determine_conversation_stage() # optional for demonstration, built into the prompt
-sales_agent.step()
-```
-> Conversation Stage: 
-> Introduction: Start the conversation by introducing yourself and your company. 
-
-> Thought: Do I need to use a tool? No <br>
-> Ted Lasso: Hello, my name is Ted Lasso and I'm calling on behalf of Sleep Haven. We are a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. I was wondering if you would be interested in learning more about our products and how they can improve your sleep?
-
-> User: Yea, sure
-
-> Conversation Stage: 
-> Value proposition: Briefly explain how your product/service can benefit the prospect. 
-
-> Thought: Do I need to use a tool? No <br>
-> Ted Lasso: Great to hear that! Our mattresses are specially designed to contour to your body shape, providing the perfect level of support and comfort for a better night's sleep. Plus, they're made with high-quality materials that are built to last. Would you like to hear more about our different mattress options?
-
-> User:  What pricing do you have for your mattresses?
-
-> Thought: Do I need to use a tool? Yes --> AI Agent uses tools here.<br>
-> Action: ProductSearch<br>
-> ActionInput pricing for mattresses<br>
-> Observation: Sleep Haven offers three mattresses: the Classic Harmony Spring Mattress for $1,299, the Plush Serenity Bamboo Mattress for $2,599, and the Luxury Cloud-Comfort Memory Foam Mattress for $999. The sizes available vary by mattress.<br>
-> Ted Lasso: Sleep Haven offers three mattresses at different price points. The Classic Harmony Spring Mattress is priced at $1,299, the Plush Serenity Bamboo Mattress is priced at $2,599, and the Luxury Cloud-Comfort Memory Foam Mattress is priced at $999. The prices may vary depending on the size you choose. Would you like more information about the specific sizes and features of each mattress? 
-
-## Product Knowledge Base
-
-The AI Sales Agent has access to tools, such as your internal Product Knowledge base.
-This allows the agent to only talk about your own products and significantly reduces hallucinations.
-
-## Understanding Context
-
-The AI Sales Agent understands the conversation stage (you can define your own stages fitting your needs):
-
-- Introduction: Start the conversation by introducing yourself and your company. 
-- Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service.
-- Value proposition: Briefly explain how your product/service can benefit the prospect. 
-- Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. 
-- Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.
-- Objection handling: Address any objections that the prospect may have regarding your product/service. 
-- Close: Ask for the sale by proposing a next step. 
-- End Conversation: The user does not want to continue the conversation, so end the call.
- 
-As such, this agent can have a natural sales conversation with a prospect and behaves based on the conversation stage. Hence, this notebook demonstrates how we can use AI to automate sales development representatives activites, such as outbound sales calls. 
-
-
-## Architecture
-
-<img src="https://singularity-assets-public.s3.amazonaws.com/new_flow.png"  width="800" height="440">
-
-## Installation
-
-Make sure your have a python 3.10+ and run:
-
-`pip install -r requirements.txt`
-
-Create `.env` file and put your Open AI Key there by specifying a line: 
-
-`OPENAI_API_KEY=sk-xxx`
-
-Install with pip
-
-`pip install salesgpt`
-
-## Try it out 
-
-To get a feel for a conversation with the AI Sales agent, you can run:
-
-`python run.py --verbose True --config examples/example_agent_setup.json`
-
-from your terminal.
-
-## Contact Us
-
-For questions, you can [contact the repo author](mailto:filipmichalsky@gmail.com).
-
-Follow me at [@FilipMichalsky](https://twitter.com/FilipMichalsky)
-
-
-## SalesGPT Roadmap
-
-
-
-
-- [high priority] Improve reliability of the parser [issue here](https://github.com/filip-michalsky/SalesGPT/issues/26) and [here](https://github.com/filip-michalsky/SalesGPT/issues/25)
-- Add example implementation of OpenAI functions agent[issue here](https://github.com/filip-michalsky/SalesGPT/issues/17)
-- Add support for multiple tools [issue here](https://github.com/filip-michalsky/SalesGPT/issues/10)
-- Add an agent controller for whne stages need to be traversed linearly without skips [issue here](https://github.com/filip-michalsky/SalesGPT/issues/19)
-- Add `too_getter` to choose a tool based on vector distance to the taks needed to be done
-- What tools should the agent have? (e.g., the ability to search the internet)
-- Add the ability of Sales Agent to interact with AI plugins on your website (.well-known/ai-plugin.json)
-~~-
- Add the ability to stop generation when user interupts the agent~~
-
-~~- Add a vectorstore to incorporate a real product knowledge base vs. the LLM making it up.~~
-
-~~- Knowledge base for products/services a Sales Agent can offer (so that LLM does not make it up)~~
-
-~~- Convert LLM Chains (linear workflow) to an Agent (decides what to do based on user's input)~~
-
-
-
-## Contributing
-
-Contributions are highly encouraged! Please fork and submit a PR.
+我将继续润色文档中的下一段。请稍候。
